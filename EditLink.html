@@ -2,32 +2,32 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Create New Or Delete User</title>
-	<link rel="stylesheet" href="Create New Or Delete User.css"/>
-	<script src="Create New Or Delete User.js"></script>
+	<title>Add or Delete Link</title>
+	<link rel = "stylesheet" href ="css/UpdateLink.css"/> 
 </head>
 
 <body>
 	<div class = "navigation">
-		<a class = "active" href = "../index.html">Home</a>
-		<a href = "../Add or Delete Link/Add or Delete Link.html">Add/Delete/Edit Links</a>
-		<a href = "../New Or Delete Or Edit Category/New Or Delete Or Edit Category.html">Create New/Delete/Edit Categories</a>
-		<a href = "../Assign Link To Category/Assign Link To Category.html">Assign Link to Category </a>
-		<a href = "../Create New Or Delete User/Create New Or Delete User.html">Create New User/ Delete User</a>
-		<a href = "../Assign Link to User/Assign Link to User.html">Assign / Unassign Link to Users </a>
+		<a class = "active" href = "index.html">Home</a>
+		<a href = "UpdateLink.html">Add/Delete/Edit Links</a>
+		<a href = "UpdateUser.html">Create New User/ Delete User</a>
+		<a href = "UpdateCategory.html">Create New/Delete/Edit Categories</a>
+		<a href = "AssignLinkToUser.html">Assign / Unassign Link to Users </a>
+		<a href = "AssignLinkToCategory.html">Assign Link to Category </a>
 	</div>
+
 	<div id = "Assign">
 		<table class = "outside"> 
 			<tr>
 				<td>
-					<h2>Create User</h2>
-					<p>Create The Name And The Email Address Of The New User:</p>
+					<h2>Add Link</h2>
+					<p>Enter Link To New URL And Give It A Name:</p>
 				</td>
 				<td>
 					<table class = "inside">
 						<tr>
 							<td>Name</td>
-							<td>Email Address</td>
+							<td>URL</td>
 						</tr>
 						<tr id = "blank">
 							<td><div contenteditable>&nbsp;</div> </td>
@@ -36,14 +36,14 @@
 					</table>
 				</td>
 				<td>
-					<button type="button" onclick="document.getElementById('id01').style.display='block'" class = "button">Create User</button>
+					<button type="button" onclick="document.getElementById('id01').style.display='block'" class = "button">Create Link</button>
 				</td>
 				<div id="id01" class="modal">
 					<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 					<form class="modal-content" action="/action_page.php">
 					  <div class="container">
 						<h3>Validate Data</h3>
-						<p>Are you sure you want to create user ____?</p>
+						<p>Are you sure you want to add link ____?</p>
 				  
 						<div class="clearfix">
 							<button type="button" class="deletebtn">Add</button>
@@ -60,14 +60,14 @@
 		<table class = "outside">
 			<tr>
 				<td>
-					<h2>Delete User</h2>
-					<p>Enter The Name Or The Email Address Of The User You Wish To Delete</p>
+					<h2>Remove Link</h2>
+					<p>Enter Name Or URL Of The Link You Wish To Delete:</p>
 				</td>
 				<td>
 					<table class = "inside">
 						<tr>
 							<td>Name</td>
-							<td>Email</td>
+							<td>URL</td>
 						</tr>
 						<tr id = "blank">
 							<td><div contenteditable>&nbsp;</div> </td>
@@ -76,14 +76,14 @@
 					</table>
 				</td>
 				<td>
-					<button type="button" onclick="document.getElementById('id02').style.display='block'" class = "button">Delete User</button>
+					<button type="button" onclick="document.getElementById('id02').style.display='block'"class = "button">Remove Link</button>
 				</td>
 				<div id="id02" class="modal">
 					<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
 					<form class="modal-content" action="/action_page.php">
 					  <div class="container">
-						<h3>Warning</h3>
-						<p>Are you sure you want to Delete User ____?</p>
+						<h3>Warning!</h3>
+						<p>Are you sure you want to delete link ____?</p>
 				  
 						<div class="clearfix">
 							<button type="button" class="deletebtn">Delete</button>
@@ -91,7 +91,7 @@
 						</div>
 					  </div>
 					</form>
-				</div>
+				  </div>
 			</tr>	
 		</table>
 	</div>
@@ -99,14 +99,14 @@
 		<table class = "outside">
 			<tr>
 				<td>
-					<h2>Edit User</h2>
-					<p>Enter The Name Or Email Of The User You Wish To Edit:</p>
+					<h2>Edit Link</h2>
+					<p>Enter Link That You Woulde Like To Edit:</p>
 				</td>
 				<td>
 					<table class = "inside">
 						<tr>
 							<td>Name</td>
-							<td>Email</td>
+							<td>URL</td>
 						</tr>
 						<tr id = "blank">
 							<td><div contenteditable>&nbsp;</div> </td>
@@ -115,21 +115,22 @@
 					</table>
 				</td>
 				<td>
-					<button type="button" onclick="document.getElementById('id03').style.display='block'" class = "button">Edit <br> User</button>
+				<button type="button" onclick="document.getElementById('id03').style.display='block'"class = "button">Edit <br> Link</button>
 				</td>
 				<div id="id03" class="modal">
 					<span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
 					<form class="modal-content" action="/action_page.php">
 					  <div class="container">
-						<h3>Validate Data</h3>
-						<p>Are you sure you want to edit user ____?</p>
+						<h3>Edit Link</h3>
+						<p>Are you sure you want to Edit link ____?</p>
+				  
 						<div class="clearfix">
-							<button type="button" class="deletebtn">Edit </button>
+							<button type="button" class="deletebtn">Edit</button>
 							<button onclick="document.getElementById('id03').style.display='none'" type="button" class="cancelbtn">Cancel</button>
 						</div>
 					  </div>
 					</form>
-				</div>
+				  </div>
 			</tr>	
 		</table>
 	</div>
