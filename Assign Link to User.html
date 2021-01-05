@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>New Or Delete Or Edit Category </title>
+	<link rel="stylesheet" href="Assign Link to User.css"/>
+	<script src="Assign Link to User.js"></script>
+</head>
+
+<body>
+	<div class = "navigation">
+		<a class = "active" href = "../index.html">Home</a>
+		<a href = "../Add or Delete Link/Add or Delete Link.html">Add/Delete/Edit Links</a>
+		<a href = "../New Or Delete Or Edit Category/New Or Delete Or Edit Category.html">Create New/Delete/Edit Categories</a>
+		<a href = "../Assign Link To Category/Assign Link To Category.html">Assign Link to Category </a>
+		<a href = "../Create New Or Delete User/Create New Or Delete User.html">Create New User/ Delete User</a>
+		<a href = "../Assign Link to User/Assign Link to User.html">Assign / Unassign Link to Users </a>
+	</div>
+	<div id = "Assign">
+		<table class = "outside"> 
+			<tr>
+				<td>
+					<h2>Assign URL To User</h2>
+					<p>Enter URL Or Nickname Of The Page You Want To Assign</p>
+				</td>
+				<td>
+					<table class = "inside">
+						<tr>
+							<td>Enter URL Or URL Name</td>
+						</tr>
+						<tr id = "blank">
+							<td><div contenteditable>&nbsp;</div> </td>
+						</tr>
+					</table>
+				</td>
+			</tr>	
+		</table>
+	</div>
+
+	<div id = "Remove">
+		<table class = "outside">
+			<tr>
+				<td>
+					<p>Enter Name Of User You Wish To Have This Link Assigned To</p>
+				</td>
+				<td>
+					<table class = "inside">
+						<tr>
+							<td>Select An Employee from drop down	</td>
+						</tr>
+						<tr id = "blank">
+							<td><select name="User" id="User">
+								<option value="User1">User1</option>
+								<option value="User2">User2</option>
+								<option value="User3">User3</option>
+								<option value="User4">User4</option>
+							  </select> 
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td>
+					<button type="button" onclick="document.getElementById('id01').style.display='block'" class = "button">Assign URL</button>
+				</td>
+				<div id="id01" class="modal">
+					<span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+					<form class="modal-content" action="/action_page.php">
+					  <div class="container">
+						<h3>Validate Data</h3>
+						<p>Are you sure you want to assign URL ____ from user ____?</p>
+						<div class="clearfix">
+							<button type="button" class="deletebtn">Assign</button>
+							<button onclick="document.getElementById('id01').style.display='none'" type="button" class="cancelbtn">Cancel</button>
+						</div>
+					  </div>
+					</form>
+				</div>
+			</tr>	
+		</table>
+	</div>
+	<div id = "Edit">
+		<table class = "outside">
+			<tr>
+				<td>
+					<h2>Unassign URL From User</h2>
+					<p>Enter The URL You Wish To Unasign</p>
+				</td>
+				<td>
+					<table class = "inside">
+						<tr>
+							<td>Enter URL Or URL Name</td>
+						</tr>
+						<tr id = "blank">
+							<td><div contenteditable>&nbsp;</div> </td>
+						</tr>
+					</table>
+				</td>
+				<td>
+					<button type="button" onclick="document.getElementById('id02').style.display='block'" class = "button">Unassign URL</button>
+				</td>
+				<div id="id02" class="modal">
+					<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+					<form class="modal-content" action="/action_page.php">
+					  <div class="container">
+						<h3>Warning</h3>
+						<p>Are you sure you want to unassign URL ____ from user ____?</p>
+						<div class="clearfix">
+							<button type="button" class="deletebtn">Unassign</button>
+							<button onclick="document.getElementById('id02').style.display='none'" type="button" class="cancelbtn">Cancel</button>
+						</div>
+					  </div>
+					</form>
+				</div>
+			</tr>	
+		</table>
+	</div>
+	
+</body>
+</html>
